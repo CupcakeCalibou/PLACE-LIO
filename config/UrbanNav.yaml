@@ -1,0 +1,37 @@
+lidar:
+  lidar_topic:  "/velodyne_points"
+  data_type: 0
+  minimum_range: 3.0
+  maximum_range: 100
+  scan_line: 32
+  range_sigma: 0.02
+  bearing_sigma: 0.01
+
+imu:
+  imu_topic:  "/imu/data"
+  gyr_rw: [ 0.2, 0.2, 0.2 ]       # [deg/sqrt(hr)]
+  acc_rw: [ 0.2, 0.2, 0.2 ]       # [m/s/sqrt(hr)]
+  b_gyr_std: [   20,   20,   20 ] # [deg/hr]
+  b_acc_std: [  800,  800,  800 ] # [mGal]
+  corr_time : 1.0                 # [hr]
+
+preprocess:
+  resolution: 0.3
+  deskew_en: true
+
+mapping:
+  voxel_size: 1.0
+  max_points_per_voxel: 20
+  time_sync_en: false
+  time_offset_lidar_to_imu: 0.0
+  extrinsic_T: [ 0, 0, 0.28 ]
+  extrinsic_R: [ 1, 0, 0,
+                 0, 1, 0,
+                 0, 0, 1]
+
+publish:
+  path_en: false
+  scan_publish_en: true        # false: close all the point cloud output
+  pcd_save_en: false
+  interval: -1                 # how many LiDAR frames saved in each pcd file;
+                                # -1 : all frames will be saved in ONE pcd file, may lead to memory crash when having too much frames.

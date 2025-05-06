@@ -1,0 +1,14 @@
+<launch>
+
+	<arg name="rviz" default="true" />
+
+	<rosparam command="load" file="$(find place_lio)/config/M2DGR.yaml" />
+
+	<node pkg="place_lio" type="data_converter" name="dataConverter" output="screen" /> 
+  <node pkg="place_lio" type="laser_mapping" name="laserMapping" output="screen" /> 
+
+	<group if="$(arg rviz)">
+		<node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find place_lio)/config/lio.rviz" />
+	</group>
+
+</launch>

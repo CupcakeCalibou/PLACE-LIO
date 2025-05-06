@@ -1,0 +1,12 @@
+{
+  "python.autoComplete.extraPaths": [
+    "/home/cupcake_calibou/Desktop/Moi/Code/PLACE-LIO/devel/lib/python3/dist-packages",
+    "/home/cupcake_calibou/Desktop/Moi/livox_driver/devel/lib/python3/dist-packages",
+    "/opt/ros/noetic/lib/python3/dist-packages"
+  ],
+  "python.analysis.extraPaths": [
+    "/home/cupcake_calibou/Desktop/Moi/Code/PLACE-LIO/devel/lib/python3/dist-packages",
+    "/home/cupcake_calibou/Desktop/Moi/livox_driver/devel/lib/python3/dist-packages",
+    "/opt/ros/noetic/lib/python3/dist-packages"
+  ]
+}
