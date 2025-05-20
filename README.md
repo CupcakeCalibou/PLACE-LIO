@@ -27,16 +27,16 @@ roslaunch place_lio run_M2DGR.launch
 rosbag play street_01.bag
 ``` 
 
-## Related Papers
+## Related papers
 ```
 @ARTICLE{he2025place,
   author={He, Linkun and Li, Bofeng and Chen, Guang’e},
   journal={IEEE Robotics and Automation Letters}, 
   title={PLACE-LIO: Plane-Centric LiDAR-Inertial Odometry}, 
   year={2025},
-  volume={},
-  number={},
-  pages={1-8},
+  volume={10},
+  number={6},
+  pages={6231-6238},
   doi={10.1109/LRA.2025.3564790}
 }
 
